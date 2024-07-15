@@ -1,16 +1,11 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
-group = 'com.github.ome450901'
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion '29.0.3'
+    compileSdk 34
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.5.1"
+        minSdkVersion 21
+        targetSdk 34
     }
     buildTypes {
         release {
@@ -22,9 +17,10 @@ android {
         sourceCompatibility = 1.8
         targetCompatibility = 1.8
     }
+    namespace 'com.willy.ratingbar'
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
 }
